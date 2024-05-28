@@ -1,0 +1,1 @@
+export { HomeSearchBarConfig } from './homeSearchBar'
