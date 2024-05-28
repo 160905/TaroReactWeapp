@@ -5,4 +5,5 @@ export const defaultTheme = {
     // loading
     nutuiLoadingIconColor: '#fa2c19',
     nutuiLoadingIconSize: '24px',
+    nutuiPriceLineColor: '#fa2c19'
 }

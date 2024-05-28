@@ -1,7 +1,11 @@
 import Taro from "@tarojs/taro";
 import type { IAppMenuProp } from '@/interface'
 
-export function getCustomNavBarRect(): IAppMenuProp {
+export function getCustomNavBarRect(): IAppMenuProp | null {
+    if (Taro.getEnv() !== Taro.ENV_TYPE.WEAPP) {
+        return null
+    }
+
     const { statusBarHeight = 0, screenWidth, windowWidth, windowHeight } = Taro.getSystemInfoSync();
     const menuButtonInfo = Taro.getMenuButtonBoundingClientRect();
 
